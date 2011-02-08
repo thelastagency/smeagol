@@ -44,6 +44,11 @@
     		<div id="content">
 {{{content}}}
 			</div>
+			{{#has_sidebar}}
+			  <div id="rightbar">
+			    {{{sidebar_content}}}
+			  </div>
+			  {{/has_sidebar}}
 		</article>
 
 		<footer>

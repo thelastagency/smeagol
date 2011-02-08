@@ -17,6 +17,15 @@ module Smeagol
         page.title
       end
       
+      def has_sidebar
+        @sidebar = (@page.sidebar || false) if @sidebar.nil?
+        !!@sidebar
+      end
+      
+      def sidebar_content
+        page.sidebar && page.sidebar.formatted_data
+      end
+      
       # Public: The HTML formatted content of the page.
       def content
         page.formatted_data
